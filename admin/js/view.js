@@ -1,6 +1,6 @@
 $(document).ready(function(){
     const savedStatus = $("#savedStatus").val();
-    $('#selectList').val(savedStatus);
+    $('#selectStatus').val(savedStatus);
 });
 
 function doDelete() {

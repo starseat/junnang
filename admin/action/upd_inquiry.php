@@ -9,15 +9,13 @@ include('./db_conn.php');
 header('Content-Type: text/html; charset=UTF-8');
 
 $seq = intval(mysqli_real_escape_string($conn, $_POST['seq']));
-
 $status = strip_tags($_POST['status']);
 $memo = urldecode(strip_tags($_POST['memo']));
 
-$sql  = "UPDATE inquiries SET status = $status, memo = '" . $memo . "', updated_at = now() WHERE seq = " . $seq;
+$sql  = "UPDATE inquiries SET status = $status, updated_at = now(), memo = '" . $memo . "' WHERE seq = " . $seq;
+$result = mysqli_query($conn, $sql) or exit(mysqli_error($conn));
 
 $message = '문의내용이 수정되었습니다.';
-
-$result = mysqli_query($conn, $sql) or exit(mysqli_error($conn));
 
 $result_array['message'] = $message;
 $result_array['result'] = true;

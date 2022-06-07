@@ -197,7 +197,7 @@ $result->free();
             </div>
             <div class="qna_comment_w">
                 <strong class="qna_title">메모</strong>
-                <textarea name="memo" id="memo" class="qna_comment" placeholder="최대 2000자 까지 입력 가능합니다."></textarea>
+                <textarea name="memo" id="memo" class="qna_comment" placeholder="최대 2000자 까지 입력 가능합니다."><?php if(!empty($info['memo'])) { echo $info['memo']; }  ?></textarea>
             </div>
         </div>
         <input type="hidden" id="savedSeq" value="<?= $seq ?>">
