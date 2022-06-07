@@ -1,0 +1,1 @@
+admin template url: https://startbootstrap.com/template/sb-admin
