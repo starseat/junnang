@@ -81,16 +81,13 @@ $(document).ready(function(){
 function sendSmsRequest(param) {
     param.temp_mode = '92';
 
-    // const _url = './api/regist.php';
-    const _url = 'http://junnang.co.kr/api/regist.php';
+    const _url = './api/regist.php';
+    // const _url = 'http://junnang.co.kr/api/regist.php';
 
     // $.post('http://www.meatexpress.co.kr/sms/sms_trans.php', param, function(jqXHR) { console.log('ajax post request jqXHR: ', jqXHR);} /*, 'json' /* xml, text, script, html */)
     // .done(function(result) { console.log('ajax post success: ', result); alert( '문의사항이 접수되었습니다.' );})
     // .fail(function(error) { console.log('ajax post fail: ', error);  alert( '문의사항 전송에 실패하였습니다.' );})
     // .always(function(response) { console.log('ajax post always: ', response); });
-
-    alert('준비중 입니다.');
-    return false;
     
     $.ajax({		
 		type : 'post',
